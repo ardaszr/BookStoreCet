@@ -1,0 +1,9 @@
+﻿@using BookStoreCet.Data;
+@model List<Publisher>
+
+    <h1> Yayınevileri Listesi </h1>
+
+    @foreach(var publisher in Model)
+    {
+        <h4> @publisher.Id - @publisher.Name Yayınları </h4>
+    }

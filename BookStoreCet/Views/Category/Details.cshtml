@@ -1,0 +1,20 @@
+﻿@using BookStoreCet.Data;
+@model Category
+
+<h1> @Model.Name Kategorisi </h1>
+<p> Category Id = @Model.Id </p>
+
+@if (Model.Books != null && Model.Books.Count > 0)
+{
+    <h3>Books:</h3>
+    <ul>
+        @foreach (var book in Model.Books)
+        {
+            <li>@book.Name</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No books found.</p>
+}

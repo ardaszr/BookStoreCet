@@ -1,0 +1,9 @@
+﻿@using BookStoreCet.Data;
+@model List<Category>
+
+<h1> Kategori Listesi </h1>
+
+@foreach (var category in Model)
+{
+    <h4> @category.Id - @category.Name Kategorisi </h4>
+}
