@@ -22,9 +22,7 @@ namespace BookStoreCet.Controllers
 
         public IActionResult Index()
         {
-            var cheapestBooks = (from b in _context.Books
-                                 orderby b.Price ascending
-                                 select b).Take(3).ToList();
+            var cheapestBooks = (from b in _context.Books orderby b.Price ascending select b).Take(3).ToList();
 
 
             return View(cheapestBooks);
